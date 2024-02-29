@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   width: 100%;
+  scroll-behavior: smooth;
+}
+.glow {
+  text-shadow: 0 0 20px #baddf7;
 }
 
 div#main {
@@ -36,13 +40,15 @@ section.padding {
 section img.background {
   height: 100%;
   left: 50%;
-  object-fit: cover;
+  object-fit: scale-down;
   pointer-events: none;
   position: absolute;
   top: 0;
   transform: translate(-50%, 0);
   width: 100vmax;
   z-index: -1;
+  background-color: #aad8f8;
+  zoom:50;
 }
 
 h1 {
@@ -122,4 +128,12 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
